@@ -71,14 +71,14 @@ const Login = () => {
   return (
     <Box
       sx={{
-        height: '100vh', // Ensure full height
-        width: '100vw',  // Ensure full width
+        height: '100vh', 
+        width: '100vw',  
         backgroundColor: (theme) => theme.palette.background.default,
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
         padding: '1rem',
-        overflow: 'auto', // Allow scrolling if content overflows
+        overflow: 'auto', 
       }}
     >
       <StyledCard>

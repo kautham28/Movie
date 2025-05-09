@@ -9,7 +9,7 @@ const MovieList = ({ movies }) => {
         display: 'grid',
         gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))',
         gap: '1.5rem',
-        width: '100%', // Ensures full width
+        width: '100%', 
       }}
     >
       {movies.map((movie) => (

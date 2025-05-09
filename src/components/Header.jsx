@@ -27,7 +27,7 @@ const Header = ({ toggleTheme, currentMode, onSearch }) => {
   const handleSearch = (event) => {
     const query = event.target.value;
     setSearchQuery(query);
-    onSearch(query); // Pass the query to the parent component
+    onSearch(query); 
   };
 
   const isDark = currentMode === 'dark';

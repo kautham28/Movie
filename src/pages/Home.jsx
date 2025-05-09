@@ -11,7 +11,7 @@ const Home = ({ searchQuery }) => {
   const [genreFilter, setGenreFilter] = useState('');
   const [yearFilter, setYearFilter] = useState('');
   const [ratingFilter, setRatingFilter] = useState('');
-  const [visibleMovies, setVisibleMovies] = useState(10); // Initial number of movies to show
+  const [visibleMovies, setVisibleMovies] = useState(10); 
   const API_KEY = import.meta.env.VITE_TMDB_API_KEY;
   const BASE_URL = 'https://api.themoviedb.org/3';
   const theme = useTheme();
@@ -37,7 +37,7 @@ const Home = ({ searchQuery }) => {
     fetchTrendingMovies();
   }, [API_KEY]);
 
-  // Apply filters and search
+  
   useEffect(() => {
     let updatedMovies = trendingMovies;
 
@@ -63,10 +63,10 @@ const Home = ({ searchQuery }) => {
     }
 
     setFilteredMovies(updatedMovies);
-    setVisibleMovies(10); // Reset visible movies when filters or search change
+    setVisibleMovies(10); 
   }, [genreFilter, yearFilter, ratingFilter, searchQuery, trendingMovies]);
 
-  // Sample genre list (expand with full TMDB genre IDs)
+  
   const genres = [
     { id: 28, name: 'Action' },
     { id: 35, name: 'Comedy' },
@@ -74,16 +74,14 @@ const Home = ({ searchQuery }) => {
     { id: 10751, name: 'Family' },
   ];
 
-  // Generate unique years from release dates
   const years = [...new Set(trendingMovies.map((movie) =>
     movie.release_date ? new Date(movie.release_date).getFullYear() : null
   ).filter(year => year))].sort((a, b) => b - a);
 
-  // Rating options (e.g., 0-10 in steps of 2)
   const ratings = [0, 2, 4, 6, 8, 10];
 
   const loadMore = () => {
-    setVisibleMovies((prev) => prev + 10); // Load 10 more movies
+    setVisibleMovies((prev) => prev + 10); 
   };
 
   return (
@@ -154,7 +152,7 @@ const Home = ({ searchQuery }) => {
               : 'Discover the most popular movies right now'}
           </Typography>
         </motion.div>
-        {/* Filter Controls */}
+        {}
         <Box sx={{ display: 'flex', gap: '1rem', mb: '2rem', flexWrap: 'wrap' }}>
           <FormControl sx={{ minWidth: 120 }}>
             <InputLabel>Genre</InputLabel>

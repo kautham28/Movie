@@ -9,7 +9,7 @@ const MovieCard = ({ movie }) => {
       <motion.div
         whileHover={{ scale: 1.05, boxShadow: '0 8px 24px rgba(0, 0, 0, 0.4)' }}
         transition={{ duration: 0.3, ease: 'easeOut' }}
-        style={{ margin: 0 }} // Ensure no margin on the motion.div
+        style={{ margin: 0 }} 
       >
         <Box
           sx={{
@@ -20,11 +20,11 @@ const MovieCard = ({ movie }) => {
             border: '1px solid rgba(255, 255, 255, 0.1)',
             position: 'relative',
             cursor: 'pointer',
-            height: '300px', // Reduced height to match image proportions
-            width: '200px', // Reduced width to match image proportions
+            height: '300px', 
+            width: '200px', 
             display: 'flex',
             flexDirection: 'column',
-            margin: 0, // Ensure no margin on the Box
+            margin: 0, 
           }}
         >
           <Box sx={{ position: 'relative', flex: '0 0 75%' }}>
@@ -38,7 +38,7 @@ const MovieCard = ({ movie }) => {
                 borderRadius: '12px 12px 0 0',
               }}
             />
-            {/* Gradient overlay for image */}
+            {}
             <Box
               sx={{
                 position: 'absolute',
@@ -58,7 +58,7 @@ const MovieCard = ({ movie }) => {
               color: '#FFFFFF',
               textAlign: 'center',
               fontWeight: 700,
-              fontSize: '1rem', // Reduced font size to fit smaller card
+              fontSize: '1rem', 
               letterSpacing: '0.5px',
               textShadow: '0 2px 4px rgba(0, 0, 0, 0.5)',
               lineHeight: 1.3,

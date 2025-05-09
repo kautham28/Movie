@@ -11,12 +11,12 @@ import MoviePage from './pages/MoviePage';
 import Header from './components/Header';
 
 function App() {
-  // Use localStorage to persist theme preference
+  
   const savedMode = localStorage.getItem('themeMode') || 'dark';
   const [mode, setMode] = useState(savedMode);
   const [searchQuery, setSearchQuery] = useState('');
 
-  // Update localStorage when theme changes
+  
   useEffect(() => {
     localStorage.setItem('themeMode', mode);
   }, [mode]);
@@ -29,7 +29,7 @@ function App() {
     setSearchQuery(query);
   };
 
-  // Force re-render when theme changes to ensure all components update
+  
   const theme = React.useMemo(() => getTheme(mode), [mode]);
 
   return (

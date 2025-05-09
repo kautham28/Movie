@@ -84,7 +84,7 @@ const Favorites = () => {
             sx={{
               display: 'grid',
               gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))',
-              gap: '0', // Remove gaps between cards
+              gap: '0', 
             }}
           >
             {favorites.map((movie) => (

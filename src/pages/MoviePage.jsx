@@ -8,7 +8,7 @@ import { MovieContext } from '../context/MovieContext';
 const MoviePage = () => {
   const { id } = useParams();
   const [movie, setMovie] = useState(null);
-  const [trailerKey, setTrailerKey] = useState(null); // State for YouTube trailer key
+  const [trailerKey, setTrailerKey] = useState(null); 
   const { addToFavorites, favorites } = useContext(MovieContext);
   const API_KEY = import.meta.env.VITE_TMDB_API_KEY;
   const BASE_URL = 'https://api.themoviedb.org/3';
@@ -20,7 +20,7 @@ const MoviePage = () => {
           `${BASE_URL}/movie/${id}?api_key=${API_KEY}&append_to_response=videos`
         );
         setMovie(response.data);
-        // Find the first trailer (type 'Trailer' and site 'YouTube')
+        
         const trailer = response.data.videos.results.find(
           (video) => video.type === 'Trailer' && video.site === 'YouTube'
         );
@@ -62,7 +62,7 @@ const MoviePage = () => {
         overflow: 'hidden',
       }}
     >
-      {/* Backdrop Image */}
+      {}
       <motion.div
         initial={{ opacity: 0, scale: 1.2 }}
         animate={{ opacity: 0.7, scale: 1 }}
@@ -80,7 +80,7 @@ const MoviePage = () => {
           zIndex: 1,
         }}
       />
-      {/* Overlay to enhance text readability */}
+      {}
       <Box
         sx={{
           position: 'absolute',
@@ -233,7 +233,7 @@ const MoviePage = () => {
                 {movie.overview}
               </Typography>
             </motion.div>
-            {/* Trailer Section */}
+            {}
             {trailerKey && (
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
